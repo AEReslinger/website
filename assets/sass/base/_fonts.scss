@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*Font-face declaration example*/
+//@font-face {
+//  font-family: 'MyWebFont';
+//  src:  url('myfont.woff2') format('woff2'),
+//        url('myfont.woff') format('woff');
+//}
+
+html { 
+  font-size: 62.5%; /* 10px */
+  font-size: calc(1em * 0.625); /* fix */
+}
+body {
+//  font-family: Arial, sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  line-height: 1.25;
+}
+
+$font-georgia: Georgia, Times, "Times New Roman", serif;

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*
+Comment everything not useful for the current project
+*/
+
+/* --- Base --- */
+@import "base/basics";
+@import "base/fonts";
+@import "base/colors";
+
+/* --- Layout --- */
+@import "layout/container";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+/* --- Components --- */
+@import "components/nav";
+@import "components/headings";
+@import "components/lists";
+@import "components/forms";
+
+/* --- Pages --- */
+@import "pages/home";
+
+/* --- Vendors --- */
+/*@import "vendors/"*/

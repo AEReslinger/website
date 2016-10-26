@@ -1,0 +1,93 @@
+/*
+Comment everything not useful for the current project
+*/
+/* --- Base --- */
+/* --- * --- */
+* {
+  box-sizing: border-box; }
+
+/* --- Body --- */
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #fff; }
+
+/* --- Lists --- */
+/* --- Forms --- */
+input,
+textarea,
+select,
+button {
+  font-size: 1em;
+  vertical-align: middle; }
+
+textarea {
+  resize: vertical; }
+
+input[type="submit"],
+button {
+  cursor: pointer; }
+
+/* --- Nav --- */
+nav ul {
+  list-style: none; }
+
+nav a {
+  text-decoration: none; }
+
+/*Font-face declaration example*/
+html {
+  font-size: 62.5%;
+  /* 10px */
+  font-size: calc(1em * 0.625);
+  /* fix */ }
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  line-height: 1.25; }
+
+/* --- Layout --- */
+.container {
+  margin: 0 auto;
+  width: 1060px; }
+
+@media (max-width: 980px) {
+  .container {
+    padding: 0 20px;
+    width: 100%; } }
+/* --- Components --- */
+ol,
+ul {
+  margin: 20px 0;
+  padding-left: 0; }
+
+ul {
+  list-style-type: none; }
+  ul li:before {
+    content: '';
+    margin-right: 10px; }
+  ul ul {
+    margin-left: 20px; }
+
+/* Labels */
+label {
+  display: block; }
+
+/* Inputs */
+input[type="text"],
+textarea,
+select {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc; }
+
+[type="radio"] + label,
+[type="checkbox"] + label {
+  display: inline-block; }
+
+/* --- Pages --- */
+/* --- Vendors --- */
+/*@import "vendors/"*/
+
+/*# sourceMappingURL=styles.css.map */
