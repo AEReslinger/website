@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+header {
+  padding-top: 75px;
+  background-color: $bg-blue;
+  
+  &,
+  a {
+    color: #fff;
+  }
+
+  nav {
+    text-align: center;
+    
+    ul {
+      display: inline-block;
+      margin: 0;
+      border: 1px solid #fff;
+      border-left: 0;
+    }
+    li {
+      display: inline;
+      margin-left: 25px;
+      font-weight: 700;
+      line-height: 1;
+      
+      &:not(:first-child):before {
+        content: '|';
+        margin-right: 25px;
+      }
+    }
+  }
+}

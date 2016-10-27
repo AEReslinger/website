@@ -8,6 +8,7 @@ Comment everything not useful for the current project
 @import "base/basics";
 @import "base/fonts";
 @import "base/colors";
+@import "base/mixins";
 
 /* --- Layout --- */
 @import "layout/container";
@@ -21,6 +22,7 @@ Comment everything not useful for the current project
 @import "components/headings";
 @import "components/lists";
 @import "components/forms";
+@import "components/logo";
 
 /* --- Pages --- */
 @import "pages/home";

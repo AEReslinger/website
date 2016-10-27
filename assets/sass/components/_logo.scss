@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.logo {
+  font-size: 1em;
+  text-align: center;
+  
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 1px;
+    height: 42px;
+    background-color: #fff;
+  }
+  
+  &:before {
+    margin-bottom: 10px;
+  }
+  
+  &:after {
+    margin-top: 10px;
+  }
+  
+  span {
+    font-size: em(23);
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 3em;
+  }
+}

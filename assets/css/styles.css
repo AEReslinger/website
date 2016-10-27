@@ -45,8 +45,9 @@ html {
 body {
   font-family: 'Playfair Display', serif;
   font-size: 2em;
-  line-height: 1.25; }
+  line-height: 1.35; }
 
+/* --- PX to EM --- */
 /* --- Layout --- */
 .container {
   margin: 0 auto;
@@ -56,6 +57,34 @@ body {
   .container {
     padding: 0 20px;
     width: 100%; } }
+header {
+  padding-top: 75px;
+  background-color: #171735; }
+  header,
+  header a {
+    color: #fff; }
+  header nav {
+    text-align: center; }
+    header nav ul {
+      display: inline-block;
+      margin: 0;
+      border: 1px solid #fff;
+      border-left: 0; }
+    header nav li {
+      display: inline;
+      margin-left: 25px;
+      font-weight: 700;
+      line-height: 1; }
+      header nav li:not(:first-child):before {
+        content: '|';
+        margin-right: 25px; }
+
+footer {
+  background-color: #171735; }
+  footer,
+  footer a {
+    color: #fff; }
+
 /* --- Components --- */
 ol,
 ul {
@@ -86,7 +115,42 @@ select {
 [type="checkbox"] + label {
   display: inline-block; }
 
+.logo {
+  font-size: 1em;
+  text-align: center; }
+  .logo:before, .logo:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 1px;
+    height: 42px;
+    background-color: #fff; }
+  .logo:before {
+    margin-bottom: 10px; }
+  .logo:after {
+    margin-top: 10px; }
+  .logo span {
+    font-size: 1.15em; }
+  .logo img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 3em; }
+
 /* --- Pages --- */
+/* --- Le cabinet --- */
+.cabinet {
+  color: #fff;
+  background-color: #171735; }
+
+/* --- Nos services --- */
+.services {
+  color: #282759; }
+
+/* --- Contact --- */
+.contact {
+  color: #282759; }
+
 /* --- Vendors --- */
 /*@import "vendors/"*/
 
