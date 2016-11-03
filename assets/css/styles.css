@@ -1011,6 +1011,24 @@ select {
 #cabinet {
   color: #fff;
   background-color: #171735; }
+  #cabinet h2 {
+    display: inline-block;
+    font-size: 2.5em;
+    line-height: 1;
+    font-style: italic; }
+    #cabinet h2:before {
+      content: '';
+      display: block;
+      height: 1px;
+      margin-bottom: 15px;
+      background-color: #fff; }
+    #cabinet h2 + p {
+      margin-top: 20px;
+      padding-top: 50px;
+      border-top: 1px solid #c5c5c4; }
+  #cabinet p {
+    margin: 0 0 30px;
+    font-family: Georgia, Times, "Times New Roman", serif; }
 
 /* --- Nos services --- */
 #services {

@@ -4,6 +4,31 @@
 #cabinet {
   color: #fff;
   background-color: $bg-blue;
+  
+  h2 {
+    display: inline-block;
+    font-size: em(50);
+    line-height: 1;
+    font-style: italic;
+    
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
+    
+    & + p {
+      margin-top: 20px;
+      padding-top: 50px;
+      border-top: 1px solid $border-grey;
+    }
+  }
+  p {
+    margin: 0 0 30px;
+    font-family: $font-georgia;
+  }
 } 
 
 /* --- Nos services --- */
