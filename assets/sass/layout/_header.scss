@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 header {
-  padding-top: 75px;
+  padding-top: em(75);
+  padding-bottom: em(300);
+  text-align: center;
   background-color: $bg-blue;
 
   &,
@@ -10,7 +12,7 @@ header {
   }
 
   nav {
-    text-align: center;
+    margin-bottom: em(90);
 
     & > a {
 
@@ -56,5 +58,34 @@ header {
         margin-right: em(70);
       }
     }
-  }
+  } /* /nav */
+
+  p {
+    margin-top: em(90,34);
+    margin-bottom: em(140,34);
+    font-size: em(34);
+  } 
+
 }
+
+.scroll-link {
+  position: relative;
+  font-size: em(28);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  text-decoration: none;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: em(-25, 28);
+    left: 50%;
+    display: block;
+    width: em(20,28);
+    height: em(20,28);
+    border: 1px solid;
+    border-color: transparent #fff #fff transparent;
+    transform: rotate(45deg) skew(-20deg, -20deg)
+  } 
+} 

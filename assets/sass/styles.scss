@@ -5,10 +5,14 @@ Comment everything not useful for the current project
 */
 
 /* --- Base --- */
+@import "base/mixins";
 @import "base/basics";
 @import "base/fonts";
 @import "base/colors";
-@import "base/mixins";
+
+/* --- Vendors --- */
+@import "vendors/gridlex";
+@import "vendors/gridlex-vars";
 
 /* --- Layout --- */
 @import "layout/container";
@@ -26,6 +30,3 @@ Comment everything not useful for the current project
 
 /* --- Pages --- */
 @import "pages/home";
-
-/* --- Vendors --- */
-/*@import "vendors/"*/

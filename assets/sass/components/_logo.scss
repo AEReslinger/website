@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .logo {
+  margin: 0;
   font-size: 1em;
   text-align: center;
   
@@ -32,4 +33,10 @@
     width: auto;
     height: 3em;
   }
+}
+
+.logo-small {
+  width: auto;
+  height: em(78);
+  vertical-align: middle;
 }
