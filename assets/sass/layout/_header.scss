@@ -3,7 +3,7 @@
 header {
   padding-top: 75px;
   background-color: $bg-blue;
-  
+
   &,
   a {
     color: #fff;
@@ -11,7 +11,20 @@ header {
 
   nav {
     text-align: center;
-    
+
+    & > a {
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: em(95);
+        height: em(60);
+        border: 1px solid #fff;
+        border-right: 0;
+        vertical-align: middle;
+      }
+    }
+
     ul {
       display: inline-block;
       margin: 0;
@@ -20,13 +33,27 @@ header {
     }
     li {
       display: inline;
-      margin-left: 25px;
+      font-size: em(20);
       font-weight: 700;
-      line-height: 1;
-      
-      &:not(:first-child):before {
-        content: '|';
-        margin-right: 25px;
+      line-height: em(60);
+
+      &:first-child {
+        margin-left: em(50);
+      } 
+
+      &:not(:first-of-type):before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: em(25);
+        margin-right: em(25);
+        margin-left: em(25);
+        background-color: #fff;
+        vertical-align: middle;
+      }
+
+      &:last-child {
+        margin-right: em(70);
       }
     }
   }
