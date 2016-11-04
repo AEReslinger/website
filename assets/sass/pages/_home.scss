@@ -4,13 +4,13 @@
 #cabinet {
   color: #fff;
   background-color: $bg-blue;
-  
+
   h2 {
     display: inline-block;
     font-size: em(50);
     line-height: 1;
     font-style: italic;
-    
+
     &:before {
       content: '';
       display: block;
@@ -18,17 +18,54 @@
       margin-bottom: 15px;
       background-color: #fff;
     }
-    
-    & + p {
+
+    & + h3 {
       margin-top: 20px;
       padding-top: 50px;
       border-top: 1px solid $border-grey;
     }
   }
+  
+  h3 {
+    margin-top: em(135,36);
+    margin-bottom: em(30,36);
+    font-size: em(36);
+    font-style: italic;
+  }
+
   p {
     margin: 0 0 30px;
     font-family: $font-georgia;
   }
+
+  a {
+    color: $golden;
+  }
+
+  ol {
+    counter-reset: cabinet;
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: em(50,24);
+      font-family: $font-georgia;
+      font-size: em(24);
+      list-style-type: none;
+      counter-increment: cabinet;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: counter(cabinet)".";
+        font-family: $font-georgia;
+        font-style: italic;
+        font-size: em(50);
+        line-height: 1;
+        color: $golden;
+      }
+    }
+  } 
 } 
 
 /* --- Nos services --- */

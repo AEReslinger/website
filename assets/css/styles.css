@@ -63,7 +63,7 @@ body {
 [class*="col-"] {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding: 0 0.5rem 1rem; }
+  padding: 0 1rem 1rem; }
 
 .col {
   flex: 1 1 0%; }
@@ -957,8 +957,7 @@ ul {
 ul {
   list-style-type: none; }
   ul li:before {
-    content: '';
-    margin-right: 10px; }
+    content: ''; }
   ul ul {
     margin-left: 20px; }
 
@@ -1022,13 +1021,40 @@ select {
       height: 1px;
       margin-bottom: 15px;
       background-color: #fff; }
-    #cabinet h2 + p {
+    #cabinet h2 + h3 {
       margin-top: 20px;
       padding-top: 50px;
       border-top: 1px solid #c5c5c4; }
+  #cabinet h3 {
+    margin-top: 3.75em;
+    margin-bottom: 0.83333em;
+    font-size: 1.8em;
+    font-style: italic; }
   #cabinet p {
     margin: 0 0 30px;
     font-family: Georgia, Times, "Times New Roman", serif; }
+  #cabinet a {
+    color: #b0976d; }
+  #cabinet ol {
+    counter-reset: cabinet; }
+    #cabinet ol li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 2.08333em;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 1.2em;
+      list-style-type: none;
+      counter-increment: cabinet; }
+      #cabinet ol li:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: counter(cabinet) ".";
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-style: italic;
+        font-size: 2.5em;
+        line-height: 1;
+        color: #b0976d; }
 
 /* --- Nos services --- */
 #services {
