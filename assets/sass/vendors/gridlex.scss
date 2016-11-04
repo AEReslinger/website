@@ -9,7 +9,7 @@
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
-  margin: 0 (-$gl-gutter/2);
+  margin: 0 (-$gl-gutter);
 }
 .#{$gl-colName},
 [class*="#{$gl-colName}-"]{

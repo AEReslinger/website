@@ -23,9 +23,6 @@
 
   h2 {
     display: inline-block;
-    font-size: em(50);
-    line-height: 1;
-    font-style: italic;
 
     &:before {
       content: '';
@@ -71,7 +68,7 @@
       counter-increment: cabinet;
       &:before {
         position: absolute;
-        top: 0;
+        top: -10px;
         left: 0;
         content: counter(cabinet)".";
         font-family: $font-georgia;
@@ -135,11 +132,136 @@
 
 /* --- Nos services --- */
 #services {
-  padding-top: 350px;
+  margin-top: 350px;
   color: $font-blue;
-} 
+
+  .intro {
+    margin-bottom: 90px;
+    text-align: center;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 1px;
+      height: 90px;
+      background-color: $bg-blue;
+    }
+    
+    &:before {
+      margin-bottom: em(20);
+    }
+    
+    &:after {
+      margin-top: em(20);
+    }
+    
+    h2 {
+      margin-bottom: 25px;
+    }
+    
+    p {
+      margin: 0 auto;
+      width: 80%;
+      font-size: em(24);
+      font-style: italic;
+    }
+  }
+  
+  h3 {
+    font-size: em(28);
+    font-style: italic;
+  }
+  
+  li {
+    position: relative;
+    padding: 0 em(20);
+    font-family: $font-georgia;
+    color: $font-color;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+      display: block;
+      width: em(12);
+      height: 1px;
+      background-color: $golden;
+      line-height: 1;
+    }
+  }
+  
+  img {
+    margin-bottom: 40px;
+    width: auto;
+    height: 75px;
+  }
+}
+
+.orga-formation {
+  position: relative;
+  margin-top: 25px;
+  padding: 45px;
+  background-color: $bg-grey;
+  border: 1px solid $golden;
+  
+  img {
+    position: absolute;
+    top: -25px;
+    left: 45px;
+  }
+  
+  h3 {
+    margin-top: 45px;
+  }
+  
+  p {
+    font-family: $font-georgia;
+  } 
+}
+
+.formations {
+  position: relative;
+  margin: em(145,24) 0;
+  padding: em(50,24) 0;
+  font-size: em(24);
+  font-style: italic;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: em(250,24);
+    height: 1px;
+    background-color: $border-grey;
+    transform: translate(-50%)
+  }
+  
+  &:before {
+    top: 0;
+  }
+  
+  &:after {
+    bottom: 0;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  ul > li {
+    font-family: "Playfair Display", sans-serif;
+  }
+}
 
 /* --- Contact --- */
 #contact {
+  background-color: $bg-grey;
   color: $font-blue;
+
+
 } 
