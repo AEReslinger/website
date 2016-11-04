@@ -2,8 +2,24 @@
 
 /* --- Le cabinet --- */
 #cabinet {
+  position: relative;
+  padding-bottom: 380px;
   color: #fff;
   background-color: $bg-blue;
+  z-index: 2;
+
+  &:after {
+    position: absolute;
+    bottom: -115px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 230px;
+    background-color: $bg-blue;
+    transform: skewY(-6deg);
+    z-index: -1;
+  }
 
   h2 {
     display: inline-block;
@@ -25,7 +41,7 @@
       border-top: 1px solid $border-grey;
     }
   }
-  
+
   h3 {
     margin-top: em(135,36);
     margin-bottom: em(30,36);
@@ -67,9 +83,59 @@
     }
   } 
 } 
+.bottom-cabinet {
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  transform: translate(-50%);
+
+  &,
+  &:before,
+  &:after,
+  & > div {
+    display: block;
+    width: 1060px;
+    height: 560px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transform: skewY(-6deg);
+  }
+
+  &:before {
+    top: -15px;
+    left: -15px;
+    border: 1px solid $golden;
+  }
+
+  &:after {
+    top: -30px;
+    left: -30px;
+    border: 1px solid $border-grey;
+  }
+
+  & > div {
+    position: relative;
+    overflow: hidden;
+    transform: skewY(-6deg);
+    z-index: 3;
+
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;     
+      transform: skewY(6deg) translate(-50%, -50%);
+    }
+  }
+}
+
 
 /* --- Nos services --- */
 #services {
+  padding-top: 350px;
   color: $font-blue;
 } 
 
