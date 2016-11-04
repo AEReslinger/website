@@ -148,19 +148,19 @@
       height: 90px;
       background-color: $bg-blue;
     }
-    
+
     &:before {
       margin-bottom: em(20);
     }
-    
+
     &:after {
       margin-top: em(20);
     }
-    
+
     h2 {
       margin-bottom: 25px;
     }
-    
+
     p {
       margin: 0 auto;
       width: 80%;
@@ -168,18 +168,18 @@
       font-style: italic;
     }
   }
-  
+
   h3 {
     font-size: em(28);
     font-style: italic;
   }
-  
+
   li {
     position: relative;
     padding: 0 em(20);
     font-family: $font-georgia;
     color: $font-color;
-    
+
     &:before {
       content: '';
       position: absolute;
@@ -192,7 +192,7 @@
       line-height: 1;
     }
   }
-  
+
   img {
     margin-bottom: 40px;
     width: auto;
@@ -206,17 +206,17 @@
   padding: 45px;
   background-color: $bg-grey;
   border: 1px solid $golden;
-  
+
   img {
     position: absolute;
     top: -25px;
     left: 45px;
   }
-  
+
   h3 {
     margin-top: 45px;
   }
-  
+
   p {
     font-family: $font-georgia;
   } 
@@ -224,11 +224,11 @@
 
 .formations {
   position: relative;
-  margin: em(145,24) 0;
+  margin: em(145,24) 0 em(225,24);
   padding: em(50,24) 0;
   font-size: em(24);
   font-style: italic;
-  
+
   &:before,
   &:after {
     content: '';
@@ -240,19 +240,19 @@
     background-color: $border-grey;
     transform: translate(-50%)
   }
-  
+
   &:before {
     top: 0;
   }
-  
+
   &:after {
     bottom: 0;
   }
-  
+
   h3 {
     text-align: center;
   }
-  
+
   ul > li {
     font-family: "Playfair Display", sans-serif;
   }
@@ -260,8 +260,51 @@
 
 /* --- Contact --- */
 #contact {
-  background-color: $bg-grey;
+  padding-top: 300px;
+  position: relative;
+  font-family: $font-georgia;
   color: $font-blue;
+  background-color: $bg-grey;
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: -73px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 130px;
+    background-color: $bg-grey;
+    border-top: 8px solid $font-blue;
+    transform: skewY(-6deg);
+    z-index: -1;
+  }
 
+  h2 {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin-bottom: 55px;
+    text-align: center;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 120px;
+      margin: 0 auto;
+      background-color: $font-blue;
+    }
+
+    &:before {
+      margin-bottom: 40px;
+    }
+    
+    &:after {
+      margin-top: 40px;
+    }
+  }
 } 
