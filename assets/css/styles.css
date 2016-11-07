@@ -974,24 +974,31 @@ form {
     display: table;
     width: 100%;
     margin-bottom: 20px; }
+    form div:last-of-type label {
+      vertical-align: top; }
 
 /* Labels */
 label {
   display: table-cell;
   width: 40%;
   font-size: 1.2em;
-  vertical-align: top; }
+  vertical-align: bottom; }
 
 /* Inputs */
 input[type="text"],
+input[type="phone"],
 textarea {
   padding: 10px;
   width: 100%;
-  border: 1px solid #c5c5c4; }
+  border: 1px solid; }
 
-input[type="text"] {
+input[type="text"],
+input[type="phone"] {
   display: table-cell;
   border-color: transparent transparent #c5c5c4 transparent; }
+
+textarea {
+  border-color: #c5c5c4; }
 
 .logo {
   margin: 0;
@@ -1212,12 +1219,12 @@ input[type="text"] {
   #contact:before {
     content: '';
     position: absolute;
-    top: -73px;
+    top: -95px;
     left: 0;
     content: '';
     display: block;
     width: 100%;
-    height: 130px;
+    height: 175px;
     background-color: #f4f4f4;
     border-top: 8px solid #282759;
     transform: skewY(-6deg);
@@ -1240,5 +1247,55 @@ input[type="text"] {
       margin-bottom: 40px; }
     #contact h2:after {
       margin-top: 40px; }
+  #contact h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.5em; }
+    #contact h3 p {
+      margin-top: 0.5em;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 0.7em;
+      font-weight: normal; }
+      #contact h3 p:before {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 1px;
+        margin-bottom: 0.5em;
+        background-color: #c5c5c4; }
+  #contact ul {
+    font-size: 0.95em; }
+    #contact ul li {
+      position: relative;
+      margin-bottom: 1.42857em;
+      padding-left: 1.42857em; }
+      #contact ul li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        background-position: 0 0;
+        background-repeat: no-repeat; }
+      #contact ul li.phone:before {
+        top: 3px;
+        width: 14px;
+        height: 24px;
+        background-image: url(../img/ico-phone.svg); }
+      #contact ul li.email a {
+        text-decoration: none; }
+      #contact ul li.email:before {
+        top: 7px;
+        width: 17px;
+        height: 11px;
+        background-image: url(../img/ico-email.svg); }
+      #contact ul li.address:before {
+        top: 4px;
+        width: 13px;
+        height: 30px;
+        background-image: url(../img/ico-address.svg); }
+    #contact ul span,
+    #contact ul a {
+      display: block; }
+    #contact ul a {
+      color: #282759; }
 
 /*# sourceMappingURL=styles.css.map */
