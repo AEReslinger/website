@@ -882,10 +882,51 @@ header {
     transform: rotate(45deg) skew(-20deg, -20deg); }
 
 footer {
-  background-color: #171735; }
+  position: relative;
+  margin-top: -215px;
+  padding-top: 215px;
+  min-height: 740px;
+  background: #171735 url(../img/bg-footer.jpg) center bottom no-repeat; }
   footer,
   footer a {
     color: #fff; }
+  footer:before {
+    content: '';
+    position: absolute;
+    top: -185px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    transform: skewY(-7deg) rotate(180deg);
+    z-index: 1; }
+  footer .container {
+    margin-top: 140px; }
+  footer nav {
+    margin-bottom: 0; }
+  footer .logo {
+    float: left;
+    font-size: 0.95em; }
+    footer .logo:before, footer .logo:after {
+      height: 1.78947em; }
+    footer .logo img {
+      height: 2.57895em; }
+  footer .grid-middle {
+    margin-bottom: 50px; }
+
+.orders-links {
+  text-align: right; }
+  .orders-links a {
+    display: block; }
+    .orders-links a + a {
+      margin-top: 50px; }
+
+.popin-links {
+  text-align: right; }
+  .popin-links a {
+    text-decoration: none; }
 
 /* --- Components --- */
 nav {
@@ -967,9 +1008,11 @@ ul {
     margin-left: 20px; }
 
 form {
+  position: relative;
   padding: 35px 30px;
   box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.5);
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 2; }
   form div {
     display: table;
     width: 100%;
@@ -1045,7 +1088,7 @@ textarea {
     width: 100%;
     height: 230px;
     background-color: #171735;
-    transform: skewY(-6deg);
+    transform: skewY(-7deg);
     z-index: -1; }
   #cabinet h2 {
     display: inline-block; }
@@ -1102,7 +1145,7 @@ textarea {
   .bottom-cabinet:before, .bottom-cabinet:after {
     content: '';
     position: absolute;
-    transform: skewY(-6deg); }
+    transform: skewY(-7deg); }
   .bottom-cabinet:before {
     top: -15px;
     left: -15px;
@@ -1114,13 +1157,13 @@ textarea {
   .bottom-cabinet > div {
     position: relative;
     overflow: hidden;
-    transform: skewY(-6deg);
+    transform: skewY(-7deg);
     z-index: 3; }
     .bottom-cabinet > div > img {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: skewY(6deg) translate(-50%, -50%); }
+      transform: skewY(7deg) translate(-50%, -50%); }
 
 /* --- Nos services --- */
 #services {
@@ -1227,7 +1270,7 @@ textarea {
     height: 175px;
     background-color: #f4f4f4;
     border-top: 8px solid #282759;
-    transform: skewY(-6deg);
+    transform: skewY(-7deg);
     z-index: -1; }
   #contact h2 {
     position: absolute;
@@ -1263,7 +1306,9 @@ textarea {
         margin-bottom: 0.5em;
         background-color: #c5c5c4; }
   #contact ul {
-    font-size: 0.95em; }
+    position: relative;
+    font-size: 0.95em;
+    z-index: 2; }
     #contact ul li {
       position: relative;
       margin-bottom: 1.42857em;
