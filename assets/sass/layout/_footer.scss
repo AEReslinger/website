@@ -44,9 +44,19 @@ footer {
       height: em(49,19);
     }
   }
-  
+
   .grid-middle {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width:$mobile-small) {
+    .logo {
+      float: none;
+    }
+    
+    .grid-middle {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -55,17 +65,26 @@ footer {
 
   a {
     display: block;
-    
+
     & + a {
       margin-top: 50px;
     }
+  }
+
+  @media (max-width:$mobile-small) {
+      text-align: center;
   }
 }
 
 .popin-links {
   text-align: right;
-  
+
   a {
     text-decoration: none;
+  }
+  
+  @media (max-width:$mobile-small) {
+    padding-bottom: 20px;
+    text-align: center;
   }
 }

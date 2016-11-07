@@ -33,6 +33,7 @@ label {
 input[type="text"],
 input[type="phone"],
 textarea {
+  display: table-cell;
   padding: 10px;
   width: 100%;
   border: 1px solid;
@@ -40,10 +41,17 @@ textarea {
 
 input[type="text"],
 input[type="phone"] {
-  display: table-cell;
   border-color: transparent transparent $border-grey transparent
 }
 
 textarea {
   border-color: $border-grey;
+}
+
+@media (max-width:$mobile-large) {
+  label,
+  input[type="text"],
+  input[type="phone"] {
+    display: block;
+  }
 }

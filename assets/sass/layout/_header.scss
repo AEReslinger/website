@@ -16,6 +16,19 @@ header {
     margin-bottom: em(140,34);
     font-size: em(34);
   } 
+  
+  @media (max-width:$mobile-large) {
+    & {
+      padding-top: em(45,34);
+      padding-bottom: em(150);
+      
+      p {
+        margin-top: em(45,26);
+        margin-bottom: em(80,26);
+        font-size: em(26);
+      }
+    }
+  }
 
 }
 
@@ -37,6 +50,12 @@ header {
     height: em(20,28);
     border: 1px solid;
     border-color: transparent #fff #fff transparent;
-    transform: rotate(45deg) skew(-20deg, -20deg)
+    transform: rotate(45deg) skew(-20deg, -20deg) translateX(50%);
   } 
+  
+  @media (max-width:$mobile-large) {
+    & {
+      font-size: em(22);
+    }
+  }
 } 
