@@ -50,8 +50,21 @@ header {
     height: em(20,28);
     border: 1px solid;
     border-color: transparent #fff #fff transparent;
-    transform: rotate(45deg) skew(-20deg, -20deg) translateX(50%);
+    transform: rotate(45deg) skew(-25deg, -25deg) translateX(-50%);
   } 
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: em(-35,28);
+    left: 50%;
+    display: block;
+    width: 160px;
+    height: 8px;
+    background: url(../img/illu-scroll-link.svg) center 0 no-repeat;
+    background-size: 160px 8px;
+    transform: translateX(-50%)
+  }
   
   @media (max-width:$mobile-large) {
     & {
