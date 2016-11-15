@@ -68,7 +68,7 @@
       line-height: 1.25;
       list-style-type: none;
       counter-increment: cabinet;
-      
+
       &:before {
         position: absolute;
         top: -10px;
@@ -82,6 +82,23 @@
       }
     }
   } 
+
+  @media (max-width:1024px) {
+    h3 {
+      margin-top: em(70,36);
+    }
+  }
+
+  @media (max-width:48em) {
+    h3 {
+      font-size: em(28);
+    }
+    
+    &,
+    ol li {
+      font-size: em(18);
+    }
+  }
 } 
 .bottom-cabinet {
   position: absolute;
@@ -130,7 +147,7 @@
       transform: skewY(7deg) translate(-50%, -50%);
     }
   }
-  
+
   @media (max-width:1059px) {
     &,
     &:before,

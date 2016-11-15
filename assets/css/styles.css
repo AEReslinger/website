@@ -1222,6 +1222,15 @@ textarea {
         font-size: 2.5em;
         line-height: 1;
         color: #b0976d; }
+  @media (max-width: 1024px) {
+    #cabinet h3 {
+      margin-top: 1.94444em; } }
+  @media (max-width: 48em) {
+    #cabinet h3 {
+      font-size: 1.4em; }
+    #cabinet,
+    #cabinet ol li {
+      font-size: 0.9em; } }
 
 .bottom-cabinet {
   position: absolute;
