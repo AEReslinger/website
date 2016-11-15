@@ -25,7 +25,7 @@ nav {
     border-left: 0;
     vertical-align: middle;
   }
-  
+
   li {
     display: inline;
     font-size: em(20);
@@ -66,21 +66,30 @@ nav {
       background-color: #fff;
       transition: width 0.5s;
     }
-    
+
     &:hover:before {
       width: 100%;
     }
   }
-  
-  
+
+  .home-link {
+    a {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+
+
   @media (max-width: 810px) {
-      margin-bottom: em(45);
-    
+    margin-bottom: em(45);
+
     & > div {
       margin-bottom: em(20);
       display: block;
       text-align: center;
-      
+
       &:before {
         display: none;
       }

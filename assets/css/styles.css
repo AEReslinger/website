@@ -864,7 +864,8 @@ header {
   header p {
     margin-top: 2.64706em;
     margin-bottom: 4.11765em;
-    font-size: 1.7em; }
+    font-size: 1.7em;
+    font-weight: normal; }
   @media (max-width: 810px) {
     header {
       padding-top: 1.32353em;
@@ -1018,6 +1019,8 @@ nav {
       transition: width 0.5s; }
     nav a:hover:before {
       width: 100%; }
+  nav .home-link a:before {
+    display: none; }
   @media (max-width: 810px) {
     nav {
       margin-bottom: 2.25em; }
