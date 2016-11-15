@@ -896,7 +896,7 @@ header {
   .scroll-link:after {
     content: '';
     position: absolute;
-    bottom: -1.25em;
+    bottom: -1.07143em;
     left: 50%;
     display: block;
     width: 160px;
