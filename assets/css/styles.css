@@ -1128,7 +1128,8 @@ textarea {
 .logo {
   margin: 0;
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+  font-weight: normal; }
   .logo:before, .logo:after {
     content: '';
     display: block;
