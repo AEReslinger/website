@@ -897,13 +897,14 @@ header {
     content: '';
     position: absolute;
     bottom: -1.07143em;
-    left: 50%;
+    left: 0%;
+    right: 0;
+    margin: auto;
     display: block;
     width: 160px;
     height: 8px;
     background: url(../img/illu-scroll-link.svg) center 0 no-repeat;
-    background-size: 160px 8px;
-    transform: translateX(-50%); }
+    background-size: 160px 8px; }
   @media (max-width: 810px) {
     .scroll-link {
       font-size: 1.1em; } }
@@ -1031,7 +1032,11 @@ nav {
         nav > div:before {
           display: none; }
       nav ul {
-        border-left: 1px solid; } }
+        border-left: 1px solid; }
+      nav li:first-child {
+        margin-left: 3em; }
+      nav li:last-child {
+        margin-right: 3em; } }
 
 /* /nav */
 h1,
@@ -1189,7 +1194,8 @@ textarea {
     margin-top: 3.75em;
     margin-bottom: 0.83333em;
     font-size: 1.8em;
-    font-style: italic; }
+    font-style: italic;
+    font-weight: normal; }
   #cabinet p {
     margin: 0 0 30px;
     font-family: Georgia, Times, "Times New Roman", serif; }
@@ -1199,10 +1205,11 @@ textarea {
     counter-reset: cabinet; }
     #cabinet ol li {
       position: relative;
-      margin-bottom: 10px;
-      padding-left: 2.08333em;
+      margin-bottom: 30px;
+      padding-left: 2.5em;
       font-family: Georgia, Times, "Times New Roman", serif;
       font-size: 1.2em;
+      line-height: 1.25;
       list-style-type: none;
       counter-increment: cabinet; }
       #cabinet ol li:before {
@@ -1249,7 +1256,10 @@ textarea {
       transform: skewY(7deg) translate(-50%, -50%); }
   @media (max-width: 1059px) {
     .bottom-cabinet, .bottom-cabinet:before, .bottom-cabinet:after, .bottom-cabinet > div {
-      width: 100%; } }
+      margin: 0 auto;
+      width: 95%; }
+    .bottom-cabinet:before, .bottom-cabinet:after {
+      display: none; } }
 
 /* --- Nos services --- */
 #services {

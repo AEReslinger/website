@@ -97,5 +97,14 @@ nav {
     & ul {
       border-left: 1px solid;
     }
+    
+    li {
+      &:first-child {
+        margin-left: 3em;
+      }
+      &:last-child {
+        margin-right: 3em;
+      }
+    }
   }
 } /* /nav */

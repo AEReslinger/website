@@ -44,6 +44,7 @@
     margin-bottom: em(30,36);
     font-size: em(36);
     font-style: italic;
+    font-weight: normal;
   }
 
   p {
@@ -60,12 +61,14 @@
 
     li {
       position: relative;
-      margin-bottom: 10px;
-      padding-left: em(50,24);
+      margin-bottom: 30px;
+      padding-left: em(60,24);
       font-family: $font-georgia;
       font-size: em(24);
+      line-height: 1.25;
       list-style-type: none;
       counter-increment: cabinet;
+      
       &:before {
         position: absolute;
         top: -10px;
@@ -133,7 +136,12 @@
     &:before,
     &:after,
     & > div {
-      width: 100%;
+      margin: 0 auto;
+      width: 95%;
+    }
+    &:before,
+    &:after {
+      display: none;
     }
   }
 }

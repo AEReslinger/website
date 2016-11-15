@@ -58,13 +58,14 @@ header {
     content: '';
     position: absolute;
     bottom: em(-30,28);
-    left: 50%;
+    left: 0%;
+    right: 0;
+    margin: auto;
     display: block;
     width: 160px;
     height: 8px;
     background: url(../img/illu-scroll-link.svg) center 0 no-repeat;
     background-size: 160px 8px;
-    transform: translateX(-50%)
   }
   
   @media (max-width:$mobile-large) {
