@@ -1198,7 +1198,8 @@ textarea {
     font-weight: normal; }
   #cabinet p {
     margin: 0 0 30px;
-    font-family: Georgia, Times, "Times New Roman", serif; }
+    font-family: Georgia, Times, "Times New Roman", serif;
+    line-height: 1.4; }
   #cabinet a {
     color: #b0976d; }
   #cabinet ol {
@@ -1228,9 +1229,10 @@ textarea {
   @media (max-width: 48em) {
     #cabinet h3 {
       font-size: 1.4em; }
-    #cabinet,
+    #cabinet {
+      font-size: 0.9em; }
     #cabinet ol li {
-      font-size: 0.9em; } }
+      font-size: 1em; } }
 
 .bottom-cabinet {
   position: absolute;
@@ -1289,18 +1291,24 @@ textarea {
     #services .intro:after {
       margin-top: 1em; }
     #services .intro h2 {
-      margin-bottom: 25px; }
+      margin-bottom: 15px; }
     #services .intro p {
       margin: 0 auto;
-      width: 80%;
+      width: 85%;
       font-size: 1.2em;
-      font-style: italic; }
+      font-style: italic;
+      color: #3c3c3b;
+      line-height: 1.5; }
   #services h3 {
     font-size: 1.4em;
-    font-style: italic; }
+    font-style: italic;
+    font-weight: normal; }
+  #services ul {
+    margin-bottom: 4em; }
   #services li {
     position: relative;
     padding: 0 1em;
+    margin-bottom: 0.3em;
     font-family: Georgia, Times, "Times New Roman", serif;
     color: #3c3c3b; }
     #services li:before {
@@ -1314,9 +1322,15 @@ textarea {
       background-color: #b0976d;
       line-height: 1; }
   #services img {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     width: auto;
     height: 75px; }
+  #services .orga-formation ul,
+  #services .formations ul {
+    margin-bottom: 0; }
+  @media (max-width: 768px) {
+    #services {
+      font-size: 0.9em; } }
 
 .orga-formation {
   position: relative;
@@ -1329,16 +1343,23 @@ textarea {
     top: -25px;
     left: 45px; }
   .orga-formation h3 {
-    margin-top: 45px; }
+    margin-top: 27px; }
   .orga-formation p {
-    font-family: Georgia, Times, "Times New Roman", serif; }
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: #3c3c3b; }
+  @media (max-width: 1024px) {
+    .orga-formation {
+      margin-bottom: 80px; } }
+  @media (max-width: 768px) {
+    .orga-formation {
+      padding-left: 25px;
+      padding-right: 25px; } }
 
 .formations {
   position: relative;
-  margin: 6.04167em 0 9.375em;
-  padding: 2.08333em 0;
-  font-size: 1.2em;
-  font-style: italic; }
+  margin: 0 0 11.25em;
+  padding: 2.5em 0 3.25em;
+  font-size: 1.2em; }
   .formations:before, .formations:after {
     content: '';
     position: absolute;
@@ -1353,9 +1374,21 @@ textarea {
   .formations:after {
     bottom: 0; }
   .formations h3 {
+    color: #282759;
     text-align: center; }
-  .formations ul > li {
-    font-family: "Playfair Display", sans-serif; }
+  .formations p,
+  .formations ul {
+    font-size: 0.83333em;
+    color: #3c3c3b; }
+  .formations p + p {
+    margin-bottom: 30px; }
+  .formations ul {
+    margin-bottom: 0; }
+    .formations ul > li {
+      font-family: "Playfair Display", sans-serif; }
+  @media (max-width: 1024px) {
+    .formations {
+      padding: 1.875em 0 2.5em; } }
 
 /* --- Contact --- */
 #contact {

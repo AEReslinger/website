@@ -50,6 +50,7 @@
   p {
     margin: 0 0 30px;
     font-family: $font-georgia;
+    line-height: 1.4;
   }
 
   a {
@@ -93,10 +94,13 @@
     h3 {
       font-size: em(28);
     }
-    
-    &,
-    ol li {
+
+    & {
       font-size: em(18);
+    }
+    
+    ol li {
+      font-size: 1em;
     }
   }
 } 
@@ -192,25 +196,33 @@
     }
 
     h2 {
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     p {
       margin: 0 auto;
-      width: 80%;
+      width: 85%;
       font-size: em(24);
       font-style: italic;
+      color: $font-color;
+      line-height: 1.5;
     }
   }
 
   h3 {
     font-size: em(28);
     font-style: italic;
+    font-weight: normal;
+  }
+
+  ul {
+    margin-bottom: em(80);
   }
 
   li {
     position: relative;
     padding: 0 em(20);
+    margin-bottom: em(6);
     font-family: $font-georgia;
     color: $font-color;
 
@@ -228,9 +240,18 @@
   }
 
   img {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     width: auto;
     height: 75px;
+  }
+
+  .orga-formation ul,
+  .formations ul {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: em(18);
   }
 }
 
@@ -248,21 +269,32 @@
   }
 
   h3 {
-    margin-top: 45px;
+    margin-top: 27px;
   }
 
   p {
     font-family: $font-georgia;
+    color: $font-color;
   } 
+  
+  @media (max-width:1024px) {
+    & {
+      margin-bottom: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .formations {
   position: relative;
-  margin: em(145,24) 0 em(225,24);
-  padding: em(50,24) 0;
+  margin: 0 0 em(225);
+  padding: em(50) 0 em(65);
   font-size: em(24);
-  font-style: italic;
-
+  
   &:before,
   &:after {
     content: '';
@@ -284,11 +316,30 @@
   }
 
   h3 {
+    color: $font-blue;
     text-align: center;
   }
 
-  ul > li {
-    font-family: "Playfair Display", sans-serif;
+  p,
+  ul {
+    font-size: em(20, 24);
+    color: $font-color;
+  }
+  
+  p + p {
+    margin-bottom: 30px;
+  }
+  
+  ul {
+    margin-bottom: 0;
+    
+    & > li {
+      font-family: "Playfair Display", sans-serif;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    padding: em(45,24) 0 em(60,24);
   }
 }
 
