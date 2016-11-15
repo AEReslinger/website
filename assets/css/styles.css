@@ -989,7 +989,6 @@ nav {
   nav li {
     display: inline;
     font-size: 1em;
-    font-weight: 700;
     line-height: 3em; }
     nav li:first-child {
       margin-left: 2.5em; }
