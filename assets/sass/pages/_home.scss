@@ -83,6 +83,20 @@
       }
     }
   } 
+  
+  .quote {
+    font-size: em(24);
+    font-style: italic;
+    
+    &:before {
+      content: '';
+    }
+    
+    cite {
+      width: 100%;
+      text-align: right;
+    }
+  }
 
   @media (max-width:1024px) {
     h3 {
@@ -98,7 +112,7 @@
     & {
       font-size: em(18);
     }
-    
+
     ol li {
       font-size: 1em;
     }
@@ -249,7 +263,7 @@
   .formations ul {
     margin-bottom: 0;
   }
-  
+
   @media (max-width: 768px) {
     font-size: em(18);
   }
@@ -276,13 +290,13 @@
     font-family: $font-georgia;
     color: $font-color;
   } 
-  
+
   @media (max-width:1024px) {
     & {
       margin-bottom: 80px;
     }
   }
-  
+
   @media (max-width: 768px) {
     padding-left: 25px;
     padding-right: 25px;
@@ -294,7 +308,7 @@
   margin: 0 0 em(225);
   padding: em(50) 0 em(65);
   font-size: em(24);
-  
+
   &:before,
   &:after {
     content: '';
@@ -325,19 +339,19 @@
     font-size: em(20, 24);
     color: $font-color;
   }
-  
+
   p + p {
     margin-bottom: 30px;
   }
-  
+
   ul {
     margin-bottom: 0;
-    
+
     & > li {
       font-family: "Playfair Display", sans-serif;
     }
   }
-  
+
   @media (max-width: 1024px) {
     padding: em(45,24) 0 em(60,24);
   }
@@ -345,7 +359,7 @@
 
 /* --- Contact --- */
 #contact {
-  padding-top: 300px;
+  padding-top: 275px;
   position: relative;
   font-family: $font-georgia;
   color: $font-blue;
@@ -368,32 +382,34 @@
 
   h2 {
     position: absolute;
-    top: -120px;
+    top: -160px;
     left: 0;
     right: 0;
-    margin-bottom: 55px;
     text-align: center;
+    font-family: 'Playfair Display', serif;
 
     &:before,
     &:after {
       content: '';
       display: block;
       width: 1px;
-      height: 120px;
       margin: 0 auto;
       background-color: $font-blue;
     }
 
     &:before {
+      height: 120px;
       margin-bottom: 40px;
     }
 
     &:after {
+      height: 90px;
       margin-top: 40px;
     }
   }
 
   h3 {
+    margin-bottom: 30px;
     font-family: "Playfair Display", sans-serif;
     font-size: em(30);
 
@@ -411,6 +427,19 @@
         margin-bottom: em(10);
         background-color: $border-grey;
       }
+
+    }
+    
+    @media (max-width:1024px) {
+      padding-left: 40px;
+    }
+    
+    @media (max-width:768px) {
+      padding-left: 20px;
+    }
+    
+    @media (max-width:568px) {
+      padding-left: 0;
     }
   }
 
@@ -421,13 +450,13 @@
 
     li {
       position: relative;
-      margin-bottom: em(30,21);
-      padding-left: em(30,21);
+      margin-bottom: em(15,19);
+      padding-left: em(40,19);
 
       &:before {
         content: '';
         position: absolute;
-        left: 0;
+        left: 10px;
         display: block;
         background-position: 0 0;
         background-repeat: no-repeat;
@@ -459,6 +488,7 @@
         height: 30px;
         background-image: url(../img/ico-address.svg);
       }
+
     }
 
     span,
@@ -469,5 +499,21 @@
     a {
       color: $font-blue;
     }
+    
+    @media (max-width:1024px) {
+      padding-left: 80px;
+    }
+    
+    @media (max-width:768px) {
+      padding-left: 20px;
+    }
+    
+    @media (max-width:568px) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 240px;
   }
 } 

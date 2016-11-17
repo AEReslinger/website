@@ -19,9 +19,31 @@ form {
     margin-bottom: 20px;
 
     &:last-of-type {
+      margin-top: 40px;
+      margin-bottom: 25px;
+      
       label {
         vertical-align: top;
       }
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    margin-top: 50px;
+  } 
+  
+  @media (max-width: 568px) {
+    padding: 0;
+    margin: 0 -20px;
+    box-shadow: none;
+    
+    [type="submit"] {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    div:first-child {
+      padding-top: 20px;
     }
   }
 }
@@ -42,11 +64,14 @@ textarea {
   display: table-cell;
   padding: 10px;
   width: 100%;
+  font-family: $font-georgia;
+  font-style: italic;
   border: 1px solid;
 } 
 
 input[type="text"],
 input[type="phone"] {
+  padding-left: 0;
   border-color: transparent transparent $border-grey transparent
 }
 
@@ -86,5 +111,6 @@ textarea {
   input[type="text"],
   input[type="phone"] {
     display: block;
+    width: 100%;
   }
 }

@@ -6,6 +6,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/faviconapple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#282759">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
     <!--    <link rel="stylesheet" href="assets/css/normalize.css" media="screen">-->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" media="screen">
@@ -14,6 +34,13 @@
   <body role="document">
     <header id="header" role="banner">
       <div class="container">
+        <input type="checkbox" id="navcheck" role="button" title="menu">
+        <label for="navcheck" aria-hidden="true" title="menu">
+          <span class="burger">
+            <span class="bar"></span>
+            Menu
+          </span>
+        </label>
         <nav id="main-nav" role="navigation">
           <div class="home-link">
             <a href="#header"><img src="assets/img/logo-aer-small.svg" alt="AER" class="logo-small"></a>
@@ -34,10 +61,10 @@
           Le cabinet AER apporte des solutions<br>
           pour vous et votre entreprise</p>
 
-        <div class="grid">
-          <div class="col-4_xs-12"><a href="http://crcc-montpellier.fr/"><img src="assets/img/logo-crcc.png" alt="Compagnie Régionale des Commissaires aux Comptes -  Montpellier"></a></div>
-          <div class="col-4_xs-12"><a href="#cabinet" class="scroll-link">Découvrez notre cabinet</a></div>
-          <div class="col-4_xs-12"><a href="http://www.oec-montpellier.org/"><img src="assets/img/logo-ordre-comptable.png" alt="Ordre des Experts Comptables - Région Montpellier"></a></div>
+        <div class="grid bottom-links">
+          <div class="col-4_sm-6_xs-12"><a href="http://crcc-montpellier.fr/"><img src="assets/img/logo-crcc.png" alt="Compagnie Régionale des Commissaires aux Comptes -  Montpellier"></a></div>
+          <div class="col-4_sm-12"><a href="#cabinet" class="scroll-link">Découvrez notre cabinet</a></div>
+          <div class="col-4_sm-6_xs-12"><a href="http://www.oec-montpellier.org/"><img src="assets/img/logo-ordre-comptable.png" alt="Ordre des Experts Comptables - Région Montpellier"></a></div>
         </div>
       </div>
     </header>
@@ -59,25 +86,8 @@
               <p>Notre métier est de vous fournir les compétences et moyens nécessaires pour pérenniser
                 votre activité, permettre son développement et vous garantir sa sécurité.</p>
 
-              <p>J'aime mener des projets nécessitant une implication personnelle, accompagner les entrepreneurs de toutes tailles et de tous secteurs d’activité dans leurs démarches (comptables, fiscales, sociales et juridiques…), que ce soit en ma qualité d’expert-comptable ou de commissaire aux comptes.</p>
-
               <p>Afin de garantir la meilleure application des mesures législatives et réglementaires et
-                vous assurer un cadre juridique cohérent, nous travaillons en étroite collaboration avec <a href="http://riquelme-avocats.com/">le
-                cabinet Riquelme Avocats</a>.</p>
-
-              <blockquote>
-                <p>Après 8 années d’exercice à Paris, j’ai souhaité en 2013 revenir sur mes terres
-                  natales, pour implanter mon cabinet : <strong>Audit Expertise Reslinger</strong>, aujourd'hui reparti entre
-                  Montagnac et Le Crès.</p>
-
-                <p>Membre de l’Ordre des experts-comptables et de la Compagnie des Commissaires aux comptes,
-                  je cultive une véritable passion pour ceux qui veulent entreprendre et mène chaque projet avec
-                  dynamisme, indépendance, et beaucoup d’implication personnelle.
-                </p>
-              </blockquote>
-
-              <cite>Jérémy Reslinger,<br>
-                expert-comptable & commissaire aux comptes</cite>
+                vous assurer un cadre juridique cohérent, nous travaillons en étroite collaboration avec <a href="http://riquelme-avocats.com/">le cabinet Riquelme Avocats</a>.</p>
 
             </div>
 
@@ -100,8 +110,25 @@
                   nombreuses compétences externes</li>
               </ol>
             </div>
-          </div> 
-        </div><!-- /grid -->
+          </div> <!-- /grid -->
+
+          <div class="quote grid">
+            <blockquote class="col-10" data-push-left="off-1" data-push-right="off-1">
+              <p>Après 8 années d’exercice à Paris, j’ai souhaité en 2013 revenir sur mes terres
+                natales, pour implanter mon cabinet : <strong>Audit Expertise Reslinger</strong>, aujourd'hui reparti entre
+                Montagnac et Le Crès.</p>
+
+              <p>Membre de l’Ordre des experts-comptables et de la Compagnie des Commissaires aux comptes,
+                je cultive une véritable passion pour ceux qui veulent entreprendre et mène chaque projet avec
+                dynamisme, indépendance, et beaucoup d’implication personnelle.
+              </p>
+            </blockquote>
+
+            <cite class="col-10" data-push-left="off-1" data-push-right="off-1">
+              Jérémy Reslinger,<br>
+              expert-comptable & commissaire aux comptes</cite>
+          </div>
+        </div>
 
         <div class="bottom-cabinet">
           <div>
@@ -237,44 +264,46 @@
           <h2>Nous contacter</h2>
 
           <div class="grid">
-            <div class="col-3_sm-12">
-              <h3>
+            <div class="col-3_md-12 grid">
+              <h3 class="col_md-6_sm-12">
                 Jérémy Reslinger
                 <p>Expert-comptable<br>
                   Commissaire aux comptes</p>
               </h3>
 
-              <ul class="grid_sm">
-                <li class="col_sm-6_xs-12 phone">+33 (0)6 85 40 68 71</li>
-                <li class="col_sm-6_xs-12 email"><a href="mailto:j.reslinger@cabinet-aer.fr">j.reslinger@cabinet-aer.fr</a></li>
-                <li class="col_sm-6_xs-12 address">105, rue du Maquet 
-                  <span>34920 Le Cres</span>
-                  <a href="">Voir sur Google map</a></li>
-                <li class="col_sm-6_xs-12 address">4, rue George Brassens
-                  <span>34530 Montagnac</span>
-                  <a href="">Voir sur Google map</a></li>
+              <ul class="col_md-6_sm-12">
+                <div class="grid">
+                  <li class="col_sm-12 phone">+33 (0)6 85 40 68 71</li>
+                  <li class="col_sm-12 email"><a href="mailto:j.reslinger@cabinet-aer.fr">j.reslinger@cabinet-aer.fr</a></li>
+                  <li class="col_sm-12 address">105, rue du Maquet 
+                    <span>34920 Le Cres</span>
+                    <a href="">Voir sur Google map</a></li>
+                  <li class="col_sm-12 address">4, rue George Brassens
+                    <span>34530 Montagnac</span>
+                    <a href="">Voir sur Google map</a></li>
+                </div>
               </ul>
             </div>
 
-            <div class="col-1_sm-0"></div>
+            <div class="col-1_md-0"></div>
 
-            <div class="col-8_sm-12">
+            <div class="col-8_md-12">
               <form  action="https://formspree.io/erick@entre-quote.com" method="POST">
                 <div>
                   <label for="name">Nom :</label>
-                  <input type="text" name="name" id="name">
+                  <input type="text" name="name" id="name" placeholder="Votre nom">
                 </div>
                 <div>
                   <label for="email">Email :</label>
-                  <input type="text" name="_replyto" id="email">
+                  <input type="text" name="_replyto" id="email" placeholder="Votre adresse email">
                 </div>
                 <div>
                   <label for="phone">Téléphone :</label>
-                  <input type="phone" name="phone" id="phone">
+                  <input type="phone" name="phone" id="phone" placeholder="Votre numéro de téléphone">
                 </div>
                 <div>
                   <label for=""message>Message :</label>
-                  <textarea name="message" id="message" rows="10"></textarea>
+                  <textarea name="message" id="message" rows="10" placeholder="Votre message"></textarea>
                 </div>
                 <button type="submit"><span>Envoyer</span></button>
                 <input type="hidden" name="_subject" value="Email depuis le site" />
@@ -287,46 +316,43 @@
 
     <footer id="footer" role="contentinfo">
       <div class="container">
-        <div class="grid-middle">
-          <div class="col-3_sm-12"> 
+        <div class="grid">
+          <div class="col-4_sm-12"> 
             <h1 class="logo">
               <span>Audit & expertise</span>
               <img src="assets/img/logo-reslinger.svg" alt="Reslinger">
             </h1>
           </div>
 
-          <div class="col-9_sm-12 grid-sm orders-links">
-            <div class="col-12_sm-6">
+          <div class="col-8_sm-12 grid-sm orders-links">
+            <div class="col-12_sm-6_xs-12">
               <a href="http://crcc-montpellier.fr/"><img src="assets/img/logo-crcc.png" alt="Compagnie Régionale des Commissaires aux Comptes -  Montpellier"></a>
             </div>
-            <div class="col-12_sm-6">
+            <div class="col-12_sm-6_xs-12">
               <a href="http://www.oec-montpellier.org/"><img src="assets/img/logo-ordre-comptable.png" alt="Ordre des Experts Comptables - Région Montpellier"></a>
             </div>
           </div>
         </div>
 
-        <div class="grid-middle">
-          <div class="col-9_sm-12">
-            <nav role="navigation">
-              <div class="home-link">
-                <a href="#header"><img src="assets/img/logo-aer-small.svg" alt="AER" class="logo-small"></a>
-              </div>
 
-              <ul>
-                <li><a href="#cabinet">Le cabinet</a></li>
-                <li><a href="#services">Nos services</a></li>
-                <li><a href="#contact">Nous contacter</a></li>
-              </ul>
-            </nav>
-          </div>
+        <nav role="navigation">
 
-          <div class="col_sm-12 popin-links">
-            <a href="">Mentions Légales</a> - <a href="">Crédits</a>
-          </div>
+          <ul>
+            <li><a href="#header">Accueil</a></li>
+            <li><a href="#cabinet">Le cabinet</a></li>
+            <li><a href="#services">Nos services</a></li>
+            <li><a href="#contact">Nous contacter</a></li>
+          </ul>
+        </nav>
+
+        <div class="col-12 popin-links">
+          <a href="">Mentions Légales</a> - <a href="">Crédits</a>
         </div>
+
       </div>
     </footer>
 
-    <!--    <script src="assets/js/init.js"></script>-->
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/init.js"></script>
   </body>
 </html>
