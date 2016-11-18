@@ -39,6 +39,9 @@ nav ul {
 nav a {
   text-decoration: none; }
 
+address {
+  font-style: normal; }
+
 /*Font-face declaration example*/
 html {
   font-size: 62.5%;
@@ -1336,13 +1339,37 @@ textarea {
         line-height: 1;
         color: #b0976d; }
   #cabinet .quote {
+    position: relative;
+    margin-top: 2.5em;
+    padding-left: 3.54167em;
     font-size: 1.2em;
     font-style: italic; }
     #cabinet .quote:before {
-      content: ''; }
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 52px;
+      height: 40px;
+      background: url(../img/ico-quote.svg) 0 0 no-repeat;
+      background-size: 52px 40px; }
+    #cabinet .quote blockquote {
+      margin: 0;
+      padding: 0; }
     #cabinet .quote cite {
       width: 100%;
       text-align: right; }
+    @media (max-width: 1024px) {
+      #cabinet .quote {
+        padding-left: 2.5em;
+        padding-right: 0.83333em; } }
+    @media (max-width: 512px) {
+      #cabinet .quote {
+        margin-top: 3.33333em;
+        padding-left: 0.83333em; }
+        #cabinet .quote:before {
+          top: -60px; } }
   @media (max-width: 1024px) {
     #cabinet h3 {
       margin-top: 1.94444em; } }
@@ -1601,6 +1628,13 @@ textarea {
         width: 17px;
         height: 11px;
         background-image: url(../img/ico-email.svg); }
+      #contact ul li.address a:before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 12px;
+        margin-right: 10px;
+        background: url(../img/ico-chevron-address.svg) 0 0 no-repeat; }
       #contact ul li.address:before {
         top: 4px;
         width: 13px;

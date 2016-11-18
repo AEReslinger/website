@@ -83,18 +83,48 @@
       }
     }
   } 
-  
+
   .quote {
+    position: relative;
+    margin-top: em(60,24);
+    padding-left: em(85,24);
     font-size: em(24);
     font-style: italic;
-    
+
     &:before {
       content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 52px;
+      height: 40px; 
+      background: url(../img/ico-quote.svg) 0 0 no-repeat;
+      background-size: 52px 40px;
     }
-    
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+
     cite {
       width: 100%;
       text-align: right;
+    }
+
+    @media(max-width:1024px) {
+      padding-left: em(60,24);
+      padding-right: em(20,24);
+    }
+
+    @media(max-width:512px) {
+      margin-top: em(80,24);
+      padding-left: em(20,24);
+
+      &:before {
+        top: -60px;
+      }
     }
   }
 
@@ -429,15 +459,15 @@
       }
 
     }
-    
+
     @media (max-width:1024px) {
       padding-left: 40px;
     }
-    
+
     @media (max-width:768px) {
       padding-left: 20px;
     }
-    
+
     @media (max-width:568px) {
       padding-left: 0;
     }
@@ -482,11 +512,22 @@
         }
       }
 
-      &.address:before {
-        top: 4px;
-        width: 13px;
-        height: 30px;
-        background-image: url(../img/ico-address.svg);
+      &.address {
+        a:before {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 12px;
+          margin-right: 10px;
+          background: url(../img/ico-chevron-address.svg) 0 0 no-repeat;
+        }
+
+        &:before {
+          top: 4px;
+          width: 13px;
+          height: 30px;
+          background-image: url(../img/ico-address.svg);
+        }
       }
 
     }
@@ -499,15 +540,15 @@
     a {
       color: $font-blue;
     }
-    
+
     @media (max-width:1024px) {
       padding-left: 80px;
     }
-    
+
     @media (max-width:768px) {
       padding-left: 20px;
     }
-    
+
     @media (max-width:568px) {
       padding-left: 0;
     }
