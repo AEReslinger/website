@@ -15,6 +15,9 @@ body {
   margin: 0;
   padding: 1em;
   background-color: #fff; }
+  @media (max-width: 768px) {
+    body {
+      padding: 0; } }
 
 /* --- Lists --- */
 /* --- Forms --- */
@@ -877,60 +880,83 @@ header {
         margin-top: 1.73077em;
         margin-bottom: 3.07692em;
         font-size: 1em; } }
-  header input {
-    position: fixed;
-    opacity: 0; }
-  header label {
-    position: absolute;
+
+@media (max-width: 810px) {
+  .menu {
+    float: left; } }
+.menu input {
+  position: fixed;
+  opacity: 0; }
+.menu label {
+  display: none;
+  cursor: pointer; }
+  @media (max-width: 810px) {
+    .menu label {
+      display: block; } }
+  .menu label .burger {
+    position: relative;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
     margin: 0;
     padding: 0;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer; }
-    header label::before {
-      position: fixed;
-      z-index: 1;
-      top: 0;
+    vertical-align: middle;
+    z-index: 3; }
+    .menu label .burger::before,
+    .menu label .burger .bar, .menu label .burger::after {
+      position: absolute;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(18, 67, 100, 0.6);
+      display: block;
+      width: 100%;
+      height: 12%;
+      background: white;
       content: '';
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .5s; }
-    header label .burger {
-      position: fixed;
-      top: 1em;
-      left: 1em;
-      z-index: 3;
-      width: 2em;
-      height: 2em;
-      margin: 0;
-      padding: 0;
-      transition: opacity 0.5s; }
-      header label .burger::before,
-      header label .burger .bar, header label .burger::after {
-        position: absolute;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 12%;
-        background: white;
-        content: '';
-        transition: all .5s; }
-      header label .burger .bar {
-        top: 44%; }
-      header label .burger::before {
-        top: 0;
-        transform-origin: top left; }
-      header label .burger::after {
-        bottom: 0;
-        transform-origin: bottom left; }
-  header input:focus + label .burger,
-  header label:hover .burger {
-    opacity: .75; }
+      transition: all .5s; }
+    .menu label .burger .bar {
+      top: 44%; }
+    .menu label .burger::before {
+      top: 0;
+      transform-origin: top left; }
+    .menu label .burger::after {
+      bottom: 0;
+      transform-origin: bottom left; }
+.menu [id="navcheck"]:checked + label {
+  position: relative;
+  color: #3c3c3b;
+  z-index: 7; }
+  .menu [id="navcheck"]:checked + label::before {
+    opacity: 1;
+    pointer-events: auto; }
+  .menu [id="navcheck"]:checked + label .burger {
+    z-index: 7; }
+    .menu [id="navcheck"]:checked + label .burger::before, .menu [id="navcheck"]:checked + label .burger::after {
+      width: 141.42%;
+      background-color: #3c3c3b; }
+    .menu [id="navcheck"]:checked + label .burger::before {
+      transform: rotate(45deg) translateY(-50%); }
+    .menu [id="navcheck"]:checked + label .burger::after {
+      transform: rotate(-45deg) translateY(50%); }
+    .menu [id="navcheck"]:checked + label .burger .bar {
+      transform: scale(0.1); }
+.menu [id="navcheck"]:checked + label + #main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  background-color: #fff;
+  z-index: 6;
+  transform: translateX(0); }
+.menu [id="navcheck"]:checked + label + #main-nav ul {
+  z-index: 7; }
+.menu [id="navcheck"]:checked + label + #main-nav li {
+  margin: 0;
+  display: block; }
+.menu [id="navcheck"]:checked + label + #main-nav li:before {
+  display: none; }
+.menu [id="navcheck"]:checked + label + #main-nav a {
+  color: #3c3c3b; }
 
 @media (max-width: 768px) {
   .bottom-links > div:first-child {
@@ -1114,7 +1140,15 @@ nav {
     display: none; }
   @media (max-width: 810px) {
     nav {
-      margin-bottom: 2.25em; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-bottom: 2.25em;
+      transform: translate3d(0, 0, 0);
+      /* material acceleration */
+      transform: translateX(-120%);
+      will-change: transform;
+      transition: transform .5s; }
       nav > div {
         margin-bottom: 1em;
         display: block;
@@ -1122,11 +1156,14 @@ nav {
         nav > div:before {
           display: none; }
       nav ul {
-        border-left: 1px solid; }
-      nav li:first-child {
-        margin-left: 3em; }
-      nav li:last-child {
-        margin-right: 3em; } }
+        border: none; }
+      nav li {
+        margin: 0;
+        display: block; }
+        nav li:before {
+          display: none; }
+      nav a {
+        color: #3c3c3b; } }
 
 /* /nav */
 h1,

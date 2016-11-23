@@ -80,10 +80,15 @@ nav {
     }
   }
 
-
-
   @media (max-width: 810px) {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-bottom: em(45);
+    transform: translate3d(0,0,0); /* material acceleration */
+    transform: translateX(-120%);
+    will-change: transform;
+    transition: transform .5s;
 
     & > div {
       margin-bottom: em(20);
@@ -94,17 +99,21 @@ nav {
         display: none;
       }
     }
-    & ul {
-      border-left: 1px solid;
+    ul {
+      border: none;
+    }
+
+    li {
+      margin: 0;
+      display: block;
+
+      &:before {
+        display: none;
+      }
     }
     
-    li {
-      &:first-child {
-        margin-left: 3em;
-      }
-      &:last-child {
-        margin-right: 3em;
-      }
+    a {
+      color: $font-color;
     }
   }
 } /* /nav */

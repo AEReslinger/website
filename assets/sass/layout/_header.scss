@@ -30,45 +30,39 @@ header {
       }
     }
   }
+}
 
+.menu {
+
+  @media (max-width:810px) {
+    float: left;
+  }
+  
   input {
     position: fixed;
     opacity: 0;
+    
   }
+  
 
   label {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    background: none;
+    display: none;
     cursor: pointer;
-
-    &::before {
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(darken(#3498db,30%),.6);
-      content: '';
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .5s;
+    
+    
+    @media (max-width:810px) {
+      display: block;
     }
 
     .burger {
-      position: fixed;
-      top: 1em;
-      left: 1em;
-      z-index: 3;
-      width: 2em;
-      height: 2em;
+      position: relative;
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
       margin: 0;
       padding: 0;
-      transition: opacity .5s ;
+      vertical-align: middle;
+      z-index: 3;
 
       &::before,
       .bar,
@@ -82,16 +76,13 @@ header {
         content: '';
         transition: all .5s;
       }
-
       .bar {
         top: 44%;
       }
-
       &::before {
         top: 0;
         transform-origin: top left;
       }
-
       &::after {
         bottom: 0;
         transform-origin: bottom left;
@@ -99,14 +90,67 @@ header {
     }
   }
 
-  input:focus + label,
-  label:hover {
-    .burger {
-      opacity: .75;
+  [id="navcheck"]:checked {
+
+    & + label {
+      position: relative;
+      color: $font-color;
+      z-index: 7;
+      
+      &::before {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .burger {
+        z-index: 7;
+
+        &::before,
+        &::after {
+          width: 141.42%; // Pythagore!
+          background-color: $font-color;
+        }
+        &::before {
+          transform: rotate(45deg) translateY(-50%);
+        }
+        &::after {
+          transform: rotate(-45deg) translateY(50%);
+        }
+
+        .bar {
+          transform: scale(0.1);
+        }
+      }
+    }
+
+    & + label + #main-nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      background-color: #fff;
+      z-index: 6;
+      transform: translateX(0);
+    }
+    & + label + #main-nav ul {
+      z-index: 7;
+    }
+    & + label + #main-nav li {
+      margin: 0;
+      display: block;
+    }
+    & + label + #main-nav li:before {
+      display: none;
+    }
+    & + label + #main-nav a {
+      color: $font-color;
     }
   }
-
 }
+
+
 
 .bottom-links {
 
