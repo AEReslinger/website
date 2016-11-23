@@ -103,11 +103,14 @@ nav {
       border: none;
     }
 
-    li {
+    li,
+    li:first-child,
+    li:last-child {
       margin: 0;
       display: block;
 
-      &:before {
+      &:before,
+      &:not(:first-of-type):before{
         display: none;
       }
     }

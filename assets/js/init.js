@@ -1,8 +1,8 @@
 // init jQuery
 $(document).ready(function(){
 
-  
-//  Smooth Scroll
+
+  //  Smooth Scroll
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -15,6 +15,16 @@ $(document).ready(function(){
       }
     }
   });
+
+  // Mobile-menu
+  $('.menu-mobile').click(function() {
+    $('.menu').toggleClass('is-open');
+  });
+  
+  $('nav a').click(function() {
+    $('.menu').toggleClass('is-open');
+  });
+
 
 });
 

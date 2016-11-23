@@ -881,19 +881,13 @@ header {
         margin-bottom: 3.07692em;
         font-size: 1em; } }
 
-@media (max-width: 810px) {
-  .menu {
-    float: left; } }
-.menu input {
-  position: fixed;
-  opacity: 0; }
-.menu label {
-  display: none;
-  cursor: pointer; }
+.menu-mobile {
+  display: none; }
   @media (max-width: 810px) {
-    .menu label {
-      display: block; } }
-  .menu label .burger {
+    .menu-mobile {
+      display: block;
+      float: left; } }
+  .menu-mobile .burger {
     position: relative;
     display: inline-block;
     width: 1.2em;
@@ -902,8 +896,8 @@ header {
     padding: 0;
     vertical-align: middle;
     z-index: 3; }
-    .menu label .burger::before,
-    .menu label .burger .bar, .menu label .burger::after {
+    .menu-mobile .burger::before,
+    .menu-mobile .burger .bar, .menu-mobile .burger::after {
       position: absolute;
       left: 0;
       display: block;
@@ -912,33 +906,27 @@ header {
       background: white;
       content: '';
       transition: all .5s; }
-    .menu label .burger .bar {
+    .menu-mobile .burger .bar {
       top: 44%; }
-    .menu label .burger::before {
+    .menu-mobile .burger::before {
       top: 0;
       transform-origin: top left; }
-    .menu label .burger::after {
+    .menu-mobile .burger::after {
       bottom: 0;
       transform-origin: bottom left; }
-.menu [id="navcheck"]:checked + label {
-  position: relative;
-  color: #3c3c3b;
+
+.is-open .burger {
   z-index: 7; }
-  .menu [id="navcheck"]:checked + label::before {
-    opacity: 1;
-    pointer-events: auto; }
-  .menu [id="navcheck"]:checked + label .burger {
-    z-index: 7; }
-    .menu [id="navcheck"]:checked + label .burger::before, .menu [id="navcheck"]:checked + label .burger::after {
-      width: 141.42%;
-      background-color: #3c3c3b; }
-    .menu [id="navcheck"]:checked + label .burger::before {
-      transform: rotate(45deg) translateY(-50%); }
-    .menu [id="navcheck"]:checked + label .burger::after {
-      transform: rotate(-45deg) translateY(50%); }
-    .menu [id="navcheck"]:checked + label .burger .bar {
-      transform: scale(0.1); }
-.menu [id="navcheck"]:checked + label + #main-nav {
+  .is-open .burger::before, .is-open .burger::after {
+    width: 141.42%;
+    background-color: #3c3c3b; }
+  .is-open .burger::before {
+    transform: rotate(45deg) translateY(-50%); }
+  .is-open .burger::after {
+    transform: rotate(-45deg) translateY(50%); }
+  .is-open .burger .bar {
+    transform: scale(0.1); }
+.is-open nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -948,14 +936,14 @@ header {
   background-color: #fff;
   z-index: 6;
   transform: translateX(0); }
-.menu [id="navcheck"]:checked + label + #main-nav ul {
+.is-open + label + #main-nav ul {
   z-index: 7; }
-.menu [id="navcheck"]:checked + label + #main-nav li {
+.is-open + label + #main-nav li {
   margin: 0;
   display: block; }
-.menu [id="navcheck"]:checked + label + #main-nav li:before {
+.is-open + label + #main-nav li:before {
   display: none; }
-.menu [id="navcheck"]:checked + label + #main-nav a {
+.is-open + label + #main-nav a {
   color: #3c3c3b; }
 
 @media (max-width: 768px) {
@@ -1157,10 +1145,16 @@ nav {
           display: none; }
       nav ul {
         border: none; }
-      nav li {
+      nav li,
+      nav li:first-child,
+      nav li:last-child {
         margin: 0;
         display: block; }
-        nav li:before {
+        nav li:before, nav li:not(:first-of-type):before,
+        nav li:first-child:before,
+        nav li:first-child:not(:first-of-type):before,
+        nav li:last-child:before,
+        nav li:last-child:not(:first-of-type):before {
           display: none; }
       nav a {
         color: #3c3c3b; } }
