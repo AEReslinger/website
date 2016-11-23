@@ -20,11 +20,11 @@ $(document).ready(function(){
   $('.menu-mobile').click(function() {
     $('.menu').toggleClass('is-open');
   });
-  
-  $('nav.is-open a').click(function() {
-    $('.menu').toggleClass('is-open');
-  });
 
+
+  $('nav a').click(function() {
+    $('.menu').removeClass('is-open');
+  });
 
 });
 
