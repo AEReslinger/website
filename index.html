@@ -28,6 +28,8 @@
 
     <!--    <link rel="stylesheet" href="assets/css/normalize.css" media="screen">-->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/remodal.css" media="screen">
+    <link rel="stylesheet" href="assets/css/remodal-default-theme.css" media="screen">
     <link rel="stylesheet" href="assets/css/styles.css" media="screen">
 
   </head> 
@@ -356,13 +358,25 @@
         </nav>
 
         <div class="col-12 popin-links">
-          <a href="">Mentions Légales</a> - <a href="">Crédits</a>
+          <a href="#modal">Mentions Légales</a> - <a href="">Crédits</a>
         </div>
 
+
+        <div class="remodal" data-remodal-id="modal">
+          <button data-remodal-action="close" class="remodal-close"></button>
+          <h1>Remodal</h1>
+          <p>
+            Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+          </p>
+          <br>
+          <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+          <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+        </div>
       </div>
     </footer>
 
     <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/remodal.min.js"></script>
     <script src="assets/js/init.js"></script>
   </body>
 </html>
