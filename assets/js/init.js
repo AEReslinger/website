@@ -21,7 +21,7 @@ $(document).ready(function(){
     $('.menu').toggleClass('is-open');
   });
   
-  $('nav a').click(function() {
+  $('nav.is-open a').click(function() {
     $('.menu').toggleClass('is-open');
   });
 
