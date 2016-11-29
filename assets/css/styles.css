@@ -851,12 +851,19 @@ body {
     display: none; } }
 .remodal {
   text-align: left; }
-  .remodal h1 {
-    font-size: 2em; }
+  .remodal h1,
   .remodal h2 {
+    color: #282759; }
+  .remodal h1 {
+    margin-bottom: 20px;
     font-size: 1.5em; }
+  .remodal h2 {
+    font-size: 1em; }
   .remodal a {
     color: #282759; }
+  .remodal p {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    margin: 5px 0 20px; }
 
 .remodal-close {
   left: auto;
@@ -1092,6 +1099,7 @@ footer {
   padding: 20px 0;
   text-align: center; }
   .popin-links a {
+    font-size: 0.8em;
     text-decoration: none; }
 
 /* --- Components --- */
@@ -1559,7 +1567,7 @@ textarea {
 .formations {
   position: relative;
   margin: 0 0 11.25em;
-  padding: 2.5em 0 3.25em;
+  padding: 2.5em 0;
   font-size: 1.2em; }
   .formations:before, .formations:after {
     content: '';
@@ -1708,6 +1716,8 @@ textarea {
     @media (max-width: 568px) {
       #contact ul {
         padding-left: 0; } }
+  #contact .grid > .grid {
+    display: block; }
   @media (max-width: 1024px) {
     #contact {
       padding-top: 240px; } }

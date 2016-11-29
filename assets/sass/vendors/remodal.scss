@@ -3,16 +3,27 @@
 .remodal {
   text-align: left;
   
+  h1,
+  h2 {
+    color: $font-blue;
+  }
+  
   h1 {
-    font-size: 2em;
+    margin-bottom: 20px;
+    font-size: em(30);
   }
   
   h2 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   
   a {
     color: $font-blue;
+  }
+  
+  p {
+    font-family: $font-georgia;
+    margin: 5px 0 20px;
   }
 }
 

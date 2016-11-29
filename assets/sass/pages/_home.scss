@@ -336,7 +336,7 @@
 .formations {
   position: relative;
   margin: 0 0 em(225);
-  padding: em(50) 0 em(65);
+  padding: em(50) 0;
   font-size: em(24);
 
   &:before,
@@ -554,6 +554,10 @@
     }
   }
 
+  .grid > .grid {
+    display: block;
+  }
+  
   @media (max-width: 1024px) {
     padding-top: 240px;
   }
