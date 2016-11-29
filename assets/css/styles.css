@@ -882,7 +882,18 @@ header {
         font-size: 1em; } }
 
 .menu-mobile {
-  display: none; }
+  position: relative;
+  display: none;
+  margin-top: -40px;
+  margin-left: -25px;
+  padding: 10px 50px 12px 25px;
+  color: #282759;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 0 25px 25px 0;
+  z-index: 7; }
   @media (max-width: 810px) {
     .menu-mobile {
       display: block;
@@ -890,24 +901,23 @@ header {
   .menu-mobile .burger {
     position: relative;
     display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
+    width: 0.79167em;
+    height: 0.58333em;
     margin: 0;
     padding: 0;
-    vertical-align: middle;
-    z-index: 3; }
+    vertical-align: 2px; }
     .menu-mobile .burger::before,
     .menu-mobile .burger .bar, .menu-mobile .burger::after {
       position: absolute;
       left: 0;
       display: block;
       width: 100%;
-      height: 12%;
-      background: white;
+      height: 2px;
+      background: #282759;
       content: '';
       transition: all .5s; }
     .menu-mobile .burger .bar {
-      top: 44%; }
+      top: 42%; }
     .menu-mobile .burger::before {
       top: 0;
       transform-origin: top left; }
@@ -918,7 +928,6 @@ header {
 .is-open .burger {
   z-index: 7; }
   .is-open .burger::before, .is-open .burger::after {
-    width: 141.42%;
     background-color: #3c3c3b; }
   .is-open .burger::before {
     transform: rotate(45deg) translateY(-50%); }
@@ -1296,6 +1305,7 @@ textarea {
     height: 3em; }
   @media (max-width: 768px) {
     .logo {
+      margin-top: 40px;
       font-size: 0.8em; }
       .logo img {
         height: calc(3em * 0.8); } }
