@@ -4,7 +4,8 @@ header {
   padding-top: em(75);
   padding-bottom: em(300);
   text-align: center;
-  background: $bg-blue url(../img/bg-header.jpg) 0 0 no-repeat;
+//  background: $bg-blue url(../img/bg-header.jpg) 0 0 no-repeat;
+  background-color: $bg-blue;
 
   &,
   a {

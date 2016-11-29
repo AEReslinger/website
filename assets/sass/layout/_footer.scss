@@ -3,7 +3,8 @@ footer {
   margin-top: -215px;
   padding-top: 215px;
   min-height: 740px;
-  background: $bg-blue url(../img/bg-header.jpg) center bottom no-repeat;
+//  background: $bg-blue url(../img/bg-header.jpg) center bottom no-repeat;
+  background-color: $bg-blue;
 
   &,
   a {
