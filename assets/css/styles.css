@@ -1067,6 +1067,7 @@ footer {
       height: 2.57895em; }
     @media (max-width: 568px) {
       footer .logo {
+        margin-left: 0;
         margin-bottom: 40px; } }
   footer .grid-middle {
     margin-bottom: 50px; }
@@ -1092,7 +1093,7 @@ footer {
     .orders-links div:first-child {
       text-align: left; } }
   @media (max-width: 568px) {
-    .orders-links div:first-child {
+    .orders-links div:first-child, .orders-links {
       text-align: center; } }
 
 .popin-links {
@@ -1238,7 +1239,7 @@ form {
       margin-top: 50px; } }
   @media (max-width: 568px) {
     form {
-      padding: 0;
+      padding: 0 20px;
       margin: 0 -20px;
       box-shadow: none; }
       form [type="submit"] {

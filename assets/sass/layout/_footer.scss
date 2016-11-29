@@ -65,6 +65,7 @@ footer {
     }
     
     @media (max-width: 568px) {
+      margin-left: 0;
       margin-bottom: 40px;
     }
   }
@@ -113,7 +114,8 @@ footer {
     }
   }
   @media (max-width:568px) {
-    div:first-child {
+    div:first-child,
+    & {
       text-align: center;
     }
   }
