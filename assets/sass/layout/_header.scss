@@ -4,7 +4,7 @@ header {
   padding-top: em(75);
   padding-bottom: em(300);
   text-align: center;
-//  background: $bg-blue url(../img/bg-header.jpg) 0 0 no-repeat;
+  //  background: $bg-blue url(../img/bg-header.jpg) 0 0 no-repeat;
   background-color: $bg-blue;
 
   &,
@@ -13,22 +13,37 @@ header {
   }
 
   p {
-    margin-top: em(90,34);
-    margin-bottom: em(140,34);
     font-size: em(34);
     font-weight: normal;
+    
+    &:first-of-type {
+      margin-top: em(90,34);
+      margin-bottom: 0;
+    }
+    &:last-of-type {
+      margin: 0 auto em(140,34);
+    }
   } 
 
   @media (max-width:$mobile-large) {
-    & {
-      padding-top: em(45,34);
-      padding-bottom: em(150);
+    padding-top: em(45,34);
+    padding-bottom: em(150);
 
-      p {
-        margin-top: em(45,26);
-        margin-bottom: em(80,26);
-        font-size: em(20);
-      }
+    p {
+      margin-top: em(45,26);
+      margin-bottom: em(80,26);
+      font-size: em(20);
+    }
+  }
+  @media (max-width:385px) {
+    p:first-of-type {
+      width: 63%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width:330px) {
+    p:first-of-type {
+      width: 70%;
     }
   }
 }
@@ -94,7 +109,7 @@ header {
 
     &::before,
     &::after {
-//      width: 141.42%; // Pythagore!
+      //      width: 141.42%; // Pythagore!
       background-color: $font-color;
     }
     &::before {
