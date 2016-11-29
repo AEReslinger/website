@@ -849,6 +849,18 @@ body {
     display: flex; }
   [class*="grid"] > [class*="_xs-0"], [class*="grid"][class*="-equalHeight"] > [class*="_xs-0"] {
     display: none; } }
+.remodal-wrapper {
+  text-align: left; }
+
+.remodal h1 {
+  font-size: 2em; }
+.remodal h2 {
+  font-size: 1.5em; }
+
+.remodal-close {
+  left: auto;
+  right: 0; }
+
 /* --- Layout --- */
 .container {
   margin: 0 auto;
