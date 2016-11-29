@@ -1153,6 +1153,7 @@ nav {
       margin-right: 3.5em; }
   nav a {
     position: relative;
+    display: inline-block;
     line-height: 1; }
     nav a:before {
       content: "";
