@@ -849,15 +849,14 @@ body {
     display: flex; }
   [class*="grid"] > [class*="_xs-0"], [class*="grid"][class*="-equalHeight"] > [class*="_xs-0"] {
     display: none; } }
-.remodal-wrapper {
+.remodal {
   text-align: left; }
-
-.remodal h1 {
-  font-size: 2em; }
-.remodal h2 {
-  font-size: 1.5em; }
-.remodal a {
-  color: #282759; }
+  .remodal h1 {
+    font-size: 2em; }
+  .remodal h2 {
+    font-size: 1.5em; }
+  .remodal a {
+    color: #282759; }
 
 .remodal-close {
   left: auto;
