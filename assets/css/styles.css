@@ -856,6 +856,8 @@ body {
   font-size: 2em; }
 .remodal h2 {
   font-size: 1.5em; }
+.remodal a {
+  color: #282759; }
 
 .remodal-close {
   left: auto;
